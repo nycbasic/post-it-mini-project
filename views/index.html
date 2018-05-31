@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Post It - Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="bootstrap.bundle.js" type="text/javascript"></script>
+        <script src="bootstrap.js" type="text/javascript"></script>
+    </head>
+    <body>
+    	<nav class="navbar">
+    		<div class="container">
+  				<span class="navbar-brand">Post-It: Mini API Project</span>
+  			</div>
+		</nav>
+
+    	
+    	<section class="main">
+    		<div class="container">
+    			<div class="row first-row">
+
+    				<div class="col-3">
+    					<h4>Enter your Post It Here!</h4>
+    					<form>
+    						<div class="form-group">
+    							<label>Title</label>
+    							<input type="email" class="form-control" id="title" placeholder="Title of Post-it">
+  							</div>
+  
+  							<div class="form-group">
+    							<label>Content</label>
+    							<textarea class="form-control" id="content" rows="8" placeholder="Add the content of your post it here!"></textarea>
+  							</div>
+  							<a class="btn btn-primary btn-one" id="btn">Submit</a>
+                            <a class="btn btn-primary btn-two" id="btn">Clear</a>
+    					</form>
+    				</div>
+
+    				<div class="col">
+    					<div class="row second-row">
+
+    						<!-- Post It Card Start -->
+                            <div class="col-4">
+                                <div class="card" id="card">
+                                    <div class="card-header" id="postit-color">
+                                        <h4>5/27/2018</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Welcome to Post-It v1.0</h5>
+                                        <p class="card-text">I'm happy to release Version 1.0 of my version of post-its! Please feel free to leave some post-it's. It will be shared among anyone who visits this project! Feel free to share your thoughts and what can be improved!</p>  
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <i class="far fa-trash-alt"></i>
+                                        <i class="far fa-check-circle"></i>     
+                                    </div>
+                                </div>
+                            </div>
+            
+							<!-- Post It Card End -->
+
+    					</div>
+    				</div>
+
+                </div>
+    		</div>
+    
+    	</section>
+
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+    
+</html>
