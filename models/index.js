@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/postit');
+mongoose.connect('mongodb://nycbasic:gqxq143@ds125016.mlab.com:25016/post-it');
 
 mongoose.Promise = Promise;
 
