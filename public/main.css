@@ -31,7 +31,7 @@ i {
 
 
 .main {
-	background: url('Office.JPG') no-repeat center;
+	background: url('office.jpg') no-repeat center;
 	background-size: cover;
 	background-color: rgba(255,255,255,0.1);
 	height: 100%;
@@ -51,7 +51,7 @@ i {
 	margin: 20px 0;
 	border-radius: 10px;
 	padding: 20px;
-	height: 42%;
+	height: 43%;
 	background: rgba(255,255,255,1);
 	-webkit-box-shadow: 0 15px 6px -6px #000;
        -moz-box-shadow: 0 15px 6px -6px #000;
