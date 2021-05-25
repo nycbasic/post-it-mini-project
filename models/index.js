@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.set('debug', true);
-mongoose.connect('mongodb://username:password@ds125016.mlab.com:25016/post-it');
+mongoose.connect(
+	'mongodb+srv://nycbasic:Cqxq1433@!@web-development-projects-b1s6x.mongodb.net/post-it?retryWrites=true', { useNewUrlParser: true,  useUnifiedTopology: true },
+);
 
 mongoose.Promise = Promise;
 
