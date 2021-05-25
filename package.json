@@ -10,6 +10,7 @@
   "author": "spoon",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "http-status-codes-json": "^2013.2.26",
     "jquery": "^3.6.0",

@@ -17,7 +17,7 @@ exports.createPostIt = function(req, res) {
 		res.status(201).json(newPostIt);
 	})
 	.catch(function(err){
-		res.send(err);
+		res.send(err)
 	})
 };
 
