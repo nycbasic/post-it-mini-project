@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
+const mongoose = require("mongoose");
 const db = process.env.DB;
-console.log(db)
+require("dotenv").config();
 
-mongoose.set('debug', true);
-mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log("MongoDB Atlas Connected!"));
+mongoose.set("debug", false);
+mongoose
+  .connect(db, { useNewUrlParser: true })
+  .then(() => console.log("MongoDB Atlas Connected!"));
 
 mongoose.Promise = Promise;
 
-module.exports.PostIt = require('./postit');
+module.exports.PostIt = require("./postit");
