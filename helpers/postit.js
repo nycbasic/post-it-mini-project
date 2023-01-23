@@ -10,15 +10,14 @@ exports.getAllPostIt = (req, res) => {
     });
 };
 
-exports.createPostIt = function (req, res) {
+exports.createPostIt = async (req, res) => {
   const { title, content } = req.body;
-  PostIt.create({ title, content })
-    .then((newPostIt) => {
-      res.status(201).json(newPostIt);
-    })
-    .catch((err) => {
-      res.send(err);
-    });
+  try {
+    const newPostIt = await PostIt.create({ title, content });
+    return res.status(201).json(newPostIt);
+  } catch (err) {
+    res.send(err);
+  }
 };
 
 exports.getPostIt = function (req, res) {
