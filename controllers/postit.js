@@ -1,16 +1,15 @@
 const { PostIt } = require("../models");
 
-exports.getAllPostIt = (req, res) => {
-  PostIt.find()
-    .then((postits) => {
-      res.json(postits);
-    })
-    .catch((err) => {
-      res.send(err);
-    });
+const getAllPostIt = async (req, res) => {
+  try {
+    const postits = await PostIt.find();
+    return res.status(201).json(postits);
+  } catch (err) {
+    return res.send(err);
+  }
 };
 
-exports.createPostIt = async (req, res) => {
+const createPostIt = async (req, res) => {
   const { title, content } = req.body;
   try {
     const newPostIt = await PostIt.create({ title, content });
@@ -20,7 +19,9 @@ exports.createPostIt = async (req, res) => {
   }
 };
 
-exports.getPostIt = function (req, res) {
+const getPostIt = async (req, res) => {
+  try {
+  } catch (err) {}
   PostIt.findById(req.params.postItId)
     .then(function (data) {
       res.json(data);
@@ -30,7 +31,7 @@ exports.getPostIt = function (req, res) {
     });
 };
 
-exports.updatePostIt = function (req, res) {
+const updatePostIt = function (req, res) {
   PostIt.findOneAndUpdate({ _id: req.params.postItId }, req.body, {
     new: true,
   })
@@ -42,7 +43,7 @@ exports.updatePostIt = function (req, res) {
     });
 };
 
-exports.deletePostIt = function (req, res) {
+const deletePostIt = function (req, res) {
   PostIt.remove({ _id: req.params.postItId })
     .then(function () {
       res.json({ message: "object deleted" });
@@ -52,4 +53,11 @@ exports.deletePostIt = function (req, res) {
     });
 };
 
-module.exports = exports;
+module.exports = {
+  getAllPostIt,
+  createPostIt,
+  getAllPostIt,
+  getPostIt,
+  updatePostIt,
+  deletePostIt,
+};
